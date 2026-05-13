@@ -1,0 +1,192 @@
+{
+  "name": "iitm_gnss_vertical_integrity_demo",
+  "seed": 42,
+  "duration_s": 300,
+  "dt_s": 0.01,
+  "scene": {
+    "frame": "ENU",
+    "origin_lat_deg": 12.990628,
+    "origin_lon_deg": 80.229689,
+    "origin_alt_m": 12.5,
+    "blend_file": "../../iitm_snippet.blend",
+    "mesh_dir": "../../meshes"
+  },
+  "mission": {
+    "cruise_speed_mps": 4,
+    "waypoint_acceptance_m": 1.5,
+    "route_planner": "astar",
+    "planner_grid_m": 6,
+    "planner_clearance_m": 12,
+    "waypoints": [
+      {
+        "name": "point",
+        "x": -170.13,
+        "y": -247.36,
+        "z": 3
+      },
+      {
+        "name": "point",
+        "x": -71.44,
+        "y": -253.04,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 18.47,
+        "y": -235.661,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 40.586,
+        "y": -190.276,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 43.58,
+        "y": -158.069,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 45.506,
+        "y": -115.547,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 48.425,
+        "y": -72.851,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 42.138,
+        "y": -41.241,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 37.555,
+        "y": 3.427,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 54.821,
+        "y": 29.591,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 108.483,
+        "y": 30.379,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 174.285,
+        "y": 31.77,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 217.111,
+        "y": 39.092,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 210.145,
+        "y": 100.518,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 215.099,
+        "y": 142.89,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 212.074,
+        "y": 185.248,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 169.174,
+        "y": 176.478,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 132.261,
+        "y": 174.462,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 72.179,
+        "y": 173.989,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 39.208,
+        "y": 178.247,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 34.061,
+        "y": 200.459,
+        "z": 5
+      },
+      {
+        "name": "point",
+        "x": 34.736,
+        "y": 242.176,
+        "z": 5
+      },
+      {
+        "name": "land",
+        "x": 71.525,
+        "y": 245.971,
+        "z": 5
+      }
+    ]
+  },
+  "sensors": {
+    "imu_rate_hz": 100,
+    "baro_rate_hz": 50,
+    "gnss_rate_hz": 1,
+    "range_rate_hz": 1,
+    "gnss_source": "gazebo",
+    "gnss_feature_csv": "../../gnss_ml_features.csv",
+    "gnss_l1_only": true,
+    "bad_z_threshold_m": 3,
+    "max_gnss_feature_rows": 200000,
+    "gnss_horizontal_sigma_m": 1,
+    "gnss_vertical_sigma_m": 0.85,
+    "gnss_urban_vertical_bias_m": 9,
+    "gnss_dropout_base": 0.01,
+    "gnss_dropout_urban": 0.12
+  },
+  "fusion": {
+    "base_gnss_sigma_m": 5,
+    "baro_sigma_m": 0.3,
+    "range_sigma_m": 0.05,
+    "adaptive_alpha": 6,
+    "range_trigger_threshold": 0.55,
+    "chi2_gate_threshold": 9
+  },
+  "energy": {
+    "base_vehicle_power_w": 300,
+    "gnss_power_w": 0.05,
+    "ml_power_w": 0.5,
+    "range_power_w": 8,
+    "range_pulse_duration_s": 0.02
+  }
+}

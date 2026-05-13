@@ -1,0 +1,61 @@
+{
+  "name": "iitm_gnss_vertical_integrity_demo",
+  "seed": 42,
+  "duration_s": 300.0,
+  "dt_s": 0.01,
+  "scene": {
+    "frame": "ENU",
+    "origin_lat_deg": 12.990628,
+    "origin_lon_deg": 80.229689,
+    "origin_alt_m": 12.5,
+    "blend_file": "../../iitm_snippet.blend",
+    "mesh_dir": "../../meshes"
+  },
+  "mission": {
+    "cruise_speed_mps": 4.0,
+    "waypoint_acceptance_m": 1.5,
+    "route_planner": "astar",
+    "planner_grid_m": 6.0,
+    "planner_clearance_m": 12.0,
+    "waypoints": [
+      {"name": "takeoff", "x": 0.0, "y": 0.0, "z": 1.0},
+      {"name": "open_sky_out", "x": 100.0, "y": 50.0, "z": 1.0},
+      {"name": "canyon_entry", "x": 150.0, "y": 100.0, "z": 7.0},
+      {"name": "canyon_high", "x": 100.0, "y": 80.0, "z": 10.0},
+      {"name": "open_sky_return", "x": 50.0, "y": 0.0, "z": 1.0},
+      {"name": "landing_setup", "x": -50.0, "y": -50.0, "z": 1.0},
+      {"name": "land", "x": 0.0, "y": 0.0, "z": 1.0}
+    ]
+  },
+  "sensors": {
+    "imu_rate_hz": 100.0,
+    "baro_rate_hz": 50.0,
+    "gnss_rate_hz": 1.0,
+    "range_rate_hz": 1.0,
+    "gnss_source": "gazebo",
+    "gnss_feature_csv": "../../gnss_ml_features.csv",
+    "gnss_l1_only": true,
+    "bad_z_threshold_m": 3.0,
+    "max_gnss_feature_rows": 200000,
+    "gnss_horizontal_sigma_m": 1.0,
+    "gnss_vertical_sigma_m": 0.85,
+    "gnss_urban_vertical_bias_m": 9.0,
+    "gnss_dropout_base": 0.01,
+    "gnss_dropout_urban": 0.12
+  },
+  "fusion": {
+    "base_gnss_sigma_m": 5.0,
+    "baro_sigma_m": 0.30,
+    "range_sigma_m": 0.05,
+    "adaptive_alpha": 6.0,
+    "range_trigger_threshold": 0.55,
+    "chi2_gate_threshold": 9.0
+  },
+  "energy": {
+    "base_vehicle_power_w": 300.0,
+    "gnss_power_w": 0.05,
+    "ml_power_w": 0.5,
+    "range_power_w": 8.0,
+    "range_pulse_duration_s": 0.02
+  }
+}

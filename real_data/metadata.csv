@@ -1,0 +1,8 @@
+file,spot_id,building,floor_label,true_z_local_m,altitude_datum_m,true_altitude_m,environment,device,session_group,split
+gnss_log_2026_01_28_16_01_03.txt,gnss_log_2026_01_28_16_01_03,unknown,unknown,,,,,unknown,gnss_log_2026_01_28_16_01_03,
+gnss_log_2026_01_28_16_04_53.txt,gnss_log_2026_01_28_16_04_53,unknown,unknown,,,,,unknown,gnss_log_2026_01_28_16_04_53,
+gnss_log_2026_01_28_16_14_38.txt,gnss_log_2026_01_28_16_14_38,unknown,unknown,,,,,unknown,gnss_log_2026_01_28_16_14_38,
+gnss_log_2026_01_28_16_18_16.txt,gnss_log_2026_01_28_16_18_16,unknown,unknown,,,,,unknown,gnss_log_2026_01_28_16_18_16,
+gnss_log_2026_04_02_18_23_37.txt,gnss_log_2026_04_02_18_23_37,unknown,unknown,,,,,unknown,gnss_log_2026_04_02_18_23_37,
+gnss_log_2026_04_02_18_36_19.txt,gnss_log_2026_04_02_18_36_19,unknown,unknown,,,,,unknown,gnss_log_2026_04_02_18_36_19,
+gnss_log_2026_05_03_15_56_42.txt,gnss_log_2026_05_03_15_56_42,unknown,unknown,,,,,unknown,gnss_log_2026_05_03_15_56_42,

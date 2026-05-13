@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gnss-vim-sim"
+version = "0.1.0"
+description = "Lightweight UAV-in-mesh simulator for mission planning, sensor logging, energy accounting, ML-in-the-loop experiments, and WebGL replay."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "GNSS-VIM-Sim Contributors"}]
+keywords = ["uav", "drone", "simulation", "mesh", "sensor-fusion", "machine-learning", "webgl"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "numpy>=1.23",
+  "matplotlib>=3.6",
+  "plotly>=5.20",
+]
+
+[project.optional-dependencies]
+mesh = ["trimesh>=4.0", "rtree>=1.0"]
+ml = ["scikit-learn>=1.2", "xgboost>=1.7", "lightgbm>=4.0"]
+data = ["pandas>=2.0"]
+dev = ["pytest>=7.0", "ruff>=0.3"]
+
+[project.scripts]
+gnss-vim-sim = "gnss_vim_sim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+gnss_vim_sim = ["assets/**/*.json", "assets/**/*.ply"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
