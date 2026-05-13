@@ -270,8 +270,8 @@ cd iitm && gnss-vim-sim run --config demo_config.json
 > VDOP signal is detectable through delay spread and elevation features without
 > requiring raw signal access.*
 
-This finding generalises beyond IITM: any urban environment where buildings
-obstruct low-elevation satellites produces the same VDOP-to-error relationship.
+I hypothesize that this finding generalises beyond IITM: any urban environment where buildings
+obstruct low-elevation satellites should produce the same VDOP-to-error relationship.
 
 ---
 
