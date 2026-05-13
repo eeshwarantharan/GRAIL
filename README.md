@@ -94,7 +94,7 @@ accuracy cost versus always-on LiDAR.
 | LiDAR trigger rate (|err| > 3 m) | 86.2 % |
 | Majority-class baseline (EKF-D proxy) | 86.2 % accuracy |
 
-### ML Classifier (XGBoost, honest GroupKFold spatial CV)
+### ML Classifier (XGBoost, GroupKFold spatial CV)
 
 | Metric | Value |
 |--------|-------|
@@ -141,7 +141,7 @@ GRAIL/
 │   └── sionna_gnss_pipeline.py   # Sionna 2.0 GNSS simulation + SP3 orbits
 │
 ├── 02_ml_pipeline/
-│   └── train_classifier.py       # Feature engineering + honest CV + XGBoost
+│   └── train_classifier.py       # Feature engineering +  CV + XGBoost
 │
 ├── 03_uav_sim/
 │   └── uav_altitude_sim.py       # 4-EKF UAV simulation with ML-in-the-loop
@@ -166,7 +166,7 @@ GRAIL/
 │   ├── sys_overview.png
 │   ├── 01_motivation/            # fig1_motivation.png, sampling maps
 │   ├── 02_signal_physics/        # fig2_signal_physics.png
-│   ├── 03_ml_results/            # fig4_model_results_honest.png
+│   ├── 03_ml_results/            # fig4_model_results.png
 │   ├── 04_uav_sim/               # sim_results_v4.png, sim_3d_v4.png
 │   └── 05_sim2real/              # sim_to_real_v2.png, distribution comparisons
 │
