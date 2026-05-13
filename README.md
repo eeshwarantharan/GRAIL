@@ -25,6 +25,13 @@ accuracy cost versus always-on LiDAR.
 
 ---
 
+## System Overview
+
+<p align="center">
+  <img src="figures/sys_overview.png" alt="GRAIL System Overview" width="900">
+</p>
+
+---
 ## Architecture
 
 ```
